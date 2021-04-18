@@ -1,0 +1,43 @@
+<!-- Header -->
+    <nav id="main_nav" class="navbar navbar-expand-lg navbar-light bg-white shadow">
+        <div class="container d-flex justify-content-between align-items-center">
+            <a class="navbar-brand h1" href="{{ path('app_truc_a_faire') }}">
+                <img class="icon" src="/build/img/taf2.png" alt="1">
+              <!--  <span class="text-dark h4">Truc à faire</span> -->
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler-success" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between" id="navbar-toggler-success">
+                <div class="flex-fill mx-xl-5 mb-2">
+                    <ul class="nav navbar-nav d-flex justify-content-between mx-xl-5 text-center text-dark">
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{ path('bricolage') }}">Bricolage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{ path('cuisine') }}">Cuisine</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{ path('jardinage') }}">Jardinage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{ path('jeux') }}">Jeux vidéos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{ path('sport') }}">Sport</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{ path('contact') }}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navbar align-self-center d-flex">
+                    <a class="nav-link" href="{{ path('meteo') }}"><i class='bx bx-sun bx-sm bx-tada-hover text-primary'></i></a>
+                    <a class="nav-link" href="{{ path('ajout_show') }}"><i class='bx bx-plus text-primary'></i></a>
+                    <a class="nav-link" href="{{ path('app_login') }}"><i class='bx bx-user-circle bx-sm text-primary'></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Close Header -->

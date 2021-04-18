@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article{% endblock %}
+
+{% block body %}
+
+<div class="container">
+    <div class = "img-fluid">
+        <img width=100% src="/bloc/image/{{ article.images }}" alt="{{article.titre}}/">
+    </div>
+
+    <p class="date"> Posté le {{article.createdAt | date("d/m/Y")}} à {{article.createdAt | date("H:i")}}
+    <p class="content">
+        {{article.contenu | raw}}
+
+        <embed src="/bloc/video/{{article.videos}}" autostart="false" height="360" width="640" />
+
+        
+        
+    </p>
+</div>
+
+<h2>Commentaires ({{article.commentaires| length}})</h2>
+    {% for commentaire in article.commentaires %}
+        <p>Commentaire écrit par {{ commentaire.pseudo }} le {{ commentaire.createdAt|date }}</p>
+        <p>{{ commentaire.contenu }}</p>
+    {% else %}
+        <p>Il n'ya pas de commentaire</p>
+    {% endfor %}
+
+    <h2>Ajouter un commentaire</h2>
+    {{ form(formComment) }}
+
+
+{% endblock %}
+

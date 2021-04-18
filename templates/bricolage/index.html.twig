@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BricolageController!{% endblock %}
+
+{% block body %}
+
+{% for article in articles %}
+
+{% if article.categories == 'Bricolage' %}
+    {% include 'poststyle.html.twig'%}
+{% endif %}
+
+{% endfor %}
+
+{% endblock %}

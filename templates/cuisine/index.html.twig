@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CuisineController!{% endblock %}
+
+{% block body %}
+
+{% for article in articles %}
+
+{% if article.categories  == 'Cuisine' %}
+    {% include 'poststyle.html.twig'%}
+{% endif %}
+
+{% endfor %}
+
+{% endblock %}

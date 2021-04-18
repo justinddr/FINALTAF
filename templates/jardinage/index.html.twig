@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello JardinageController!{% endblock %}
+
+{% block body %}
+
+{% for article in articles %}
+
+{% if article.categories  == 'Jardinage' %}
+    {% include 'poststyle.html.twig'%}
+{% endif %}
+
+{% endfor %}
+
+{% endblock %}
